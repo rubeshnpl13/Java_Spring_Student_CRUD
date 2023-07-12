@@ -16,7 +16,7 @@ public class StudentController {
 
     private StudentService studentService;
 
-    //inject employee service using constructor injection
+    //inject student service using constructor injection
 
     @Autowired
     public StudentController(StudentService studentService){
@@ -74,6 +74,7 @@ public class StudentController {
         studentService.deleteById(studentID);
         return "Deleted student id is: "+studentID;
     }
+
 
 
 

@@ -3,24 +3,24 @@ package com.example.nishant.studentcrud.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "student_details")
+@Table(name = "STUDENTDETAILS")
 public class Student {
 
     //define columns
+
     @Id
-    @Column(name="studentID")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name="fullName")
     private String fullName;
 
-    @Column(name="gmail")
+
     private String gmail;
 
-    @Column(name="address")
+
     private String address;
 
-    @Column(name = "phone")
+
     private String phone;
 
 
@@ -75,14 +75,4 @@ public class Student {
         this.phone = phone;
     }
 
-    @Override
-    public String toString() {
-        return "Student{" +
-                "id=" + id +
-                ", fullName='" + fullName + '\'' +
-                ", gmail='" + gmail + '\'' +
-                ", address='" + address + '\'' +
-                ", phone='" + phone + '\'' +
-                '}';
-    }
 }
